@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary: #0EA5E9;
+  --primary-dark: #0284C7;
+  --primary-light: #EFF6FF;
+  --secondary: #10B981;
+  --secondary-light: #ECFDF5;
+  --accent: #8B5CF6;
+  --danger: #F43F5E;
+  --danger-light: #FFF1F2;
+  --warning: #F59E0B;
+  --warning-light: #FFFBEB;
+
+  --sidebar-bg: #064e3b;
+  --sidebar-surface: #065f46;
+  --sidebar-border: rgba(255,255,255,0.09);
+  --sidebar-text: #a7f3d0;
+  --sidebar-text-muted: #6ee7b7;
+  --sidebar-active-bg: rgba(167,243,208,0.15);
+  --sidebar-active-text: #d1fae5;
+
+  --bg-app: #EBF0F7;          /* was #F8FAFC — subtle blue-tinted, bridges the sidebar */
+  --bg-elevated: #DDE5EF;     /* was #F1F5F9 — slightly deeper for cards/hover */
+  --bg-surface: #FFFFFF;
+
+  --text-primary: #0F172A;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+
+  --border: #CDD7E3;          /* was #E2E8F0 — slightly more visible on the new bg */
+  --border-light: #D8E2ED;    /* was #F1F5F9 */
+
+  --shadow-sm: 0 1px 3px rgba(15,23,42,0.06);
+  --shadow-md: 0 4px 16px rgba(15,23,42,0.08);
+  --shadow-lg: 0 8px 32px rgba(15,23,42,0.12);
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --sidebar-width: 240px;
+  --topbar-height: 52px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }

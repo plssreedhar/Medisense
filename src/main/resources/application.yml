@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: medisense
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    open-in-view: false
+  flyway:
+    enabled: true
+    out-of-order: true
+  ai:
+    anthropic:
+      api-key: ${ANTHROPIC_API_KEY}
+      chat:
+        options:
+          model: claude-sonnet-4-20250514
+          max-tokens: 1024
+
+server:
+  port: 8080
+
+logging:
+  level:
+    root: INFO
+    com.epam.medisense: DEBUG
+    org.springframework.web.servlet.DispatcherServlet: DEBUG
+    org.springframework.ai: DEBUG
+
+prompts:
+  extraction: classpath:prompts/medisummarize/extraction-agent.st
+  summarization: classpath:prompts/medisummarize/summarization-agent.st
+  validation: classpath:prompts/shared/document-validation-agent.st
+  policy: classpath:prompts/claimsense/policy-agent.st
+  bill-analysis: classpath:prompts/claimsense/bill-analysis-agent.st
+  reasoning: classpath:prompts/claimsense/reasoning-agent.st
+  explanation: classpath:prompts/claimsense/explanation-agent.st
+  chat: classpath:prompts/medisummarize/chat-agent.st
+  medichat:
+    orchestrator: classpath:prompts/medichat/orchestrator-agent.st
+    followup: classpath:prompts/medichat/followup-agent.st
+    chat: classpath:prompts/medichat/chat-agent.st

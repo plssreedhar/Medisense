@@ -1,0 +1,72 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 2rem;
+  height: 56px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.brand {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #2563eb;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab {
+  padding: 0.375rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  background: #f1f5f9;
+  color: #1e40af;
+}
+
+.tab.active {
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 10px;
+  color: #94a3b8;
+  font-size: 1rem;
+  background: #ffffff;
+}

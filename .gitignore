@@ -33,4 +33,5 @@ build/
 .vscode/
 
 test-data/
-uploads/
+uploads/QA.txt
+QA2.txt
